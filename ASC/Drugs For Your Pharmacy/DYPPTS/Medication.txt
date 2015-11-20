@@ -1,0 +1,5 @@
+1001	Zoloft	Tab	True	1	DROWSINESS
+1002	Motrin	Cap	True	2|3	DIZZINESS
+1003	Zyrtec	Tab	False	DROWSINESS	DIZZINESS
+1004	Prednisone	Tab	False	DIZZINESS
+1005	Advair	Inhaler	False	DIZZINESS

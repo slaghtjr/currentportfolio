@@ -1,0 +1,35 @@
+What is AngularJS?
+Answers:  
+java script library that is based on the MVC framework
+An Angular expression is a unit of code which resolves to a value which occur in {{ }} 
+Answers:  true  false
+Which of these is not an AngularJS core feature?
+Answers:  MVC  Data Binding  Services  None of the above
+Write the code to create an AngularJS directive
+Answers:  
+.directive('directiveName', function(necessaryParams){//code here})
+What directive sets the scope of an Angular module?
+Answers:  ng-controller  ngApp  ng-app  None of the above
+What is the maximum amount of scopes and Angular app can have?
+Answers:  5  42  9001  None of the above
+Name 3 prebuilt Angular services.
+Answers:  
+$http, $parse, $interval
+The directive ng-model signifies One-Way data binding
+Answers:  true  false
+Explain the design pattern of MVC
+Answers:  
+Model == data representation for the application, View == the outputted representation to the user of the model information, controller == the communication between the view and the model, influenced by user interactions on the view (button clicks). M<==>C<==>V <---User
+What type of elements is ng-model generally applied to?
+Answers:  div  input  section  body
+jQuery is required to use AnguarJS
+Answers:  true  false
+Which prebuilt service allows HTTP AJAX calls?
+Answers:  $scope  $request  $ajax  $http
+What is dependency injection and how does it work in Angular?
+Answers:  
+DI handles the dependencies (what a specific part of the software requires. Angular uses it to decouple and handle all the shifting of data.
+Services are singleton objects in AngularJS
+Answers:  true  false
+Which of the following does {{ }} represent?
+Answers:  One-Way Data Binding  Two-Way Data Binding  Scope Definition  None of the above

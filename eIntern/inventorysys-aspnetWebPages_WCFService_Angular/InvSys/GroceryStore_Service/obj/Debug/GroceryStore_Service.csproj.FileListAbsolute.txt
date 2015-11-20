@@ -1,0 +1,13 @@
+C:\Users\Ethan\Desktop\inventorysys\InvSys\GroceryStore_Service\bin\GroceryStore_Service.dll.config
+C:\Users\Ethan\Desktop\inventorysys\InvSys\GroceryStore_Service\bin\GroceryStore_Service.dll
+C:\Users\Ethan\Desktop\inventorysys\InvSys\GroceryStore_Service\bin\GroceryStore_Service.pdb
+C:\Users\Ethan\Desktop\inventorysys\InvSys\GroceryStore_Service\bin\AjaxControlToolkit.dll
+C:\Users\Ethan\Desktop\inventorysys\InvSys\GroceryStore_Service\bin\EntityFramework.dll
+C:\Users\Ethan\Desktop\inventorysys\InvSys\GroceryStore_Service\bin\EntityFramework.SqlServer.dll
+C:\Users\Ethan\Desktop\inventorysys\InvSys\GroceryStore_Service\bin\EntityFramework.xml
+C:\Users\Ethan\Desktop\inventorysys\InvSys\GroceryStore_Service\bin\EntityFramework.SqlServer.xml
+C:\Users\Ethan\Desktop\inventorysys\InvSys\GroceryStore_Service\obj\Debug\GroceryStore_Service.Migrations.Initial.resources
+C:\Users\Ethan\Desktop\inventorysys\InvSys\GroceryStore_Service\obj\Debug\GroceryStore_Service.Migrations.FixingIssues.resources
+C:\Users\Ethan\Desktop\inventorysys\InvSys\GroceryStore_Service\obj\Debug\GroceryStore_Service.csproj.GenerateResource.Cache
+C:\Users\Ethan\Desktop\inventorysys\InvSys\GroceryStore_Service\obj\Debug\GroceryStore_Service.dll
+C:\Users\Ethan\Desktop\inventorysys\InvSys\GroceryStore_Service\obj\Debug\GroceryStore_Service.pdb

@@ -1,0 +1,22 @@
+﻿@model Redux_Appts.Appointment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Appointment</h4>
+    <hr />
+    @Html.Partial("_AppointmentDetailView")<br />
+    <h4>Prescriptions</h4>
+    @foreach (var s in Model.Prescriptions)
+    {
+        @Html.Partial("_DrugsDetailView",s)
+    }
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

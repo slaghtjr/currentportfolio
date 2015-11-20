@@ -1,0 +1,79 @@
+﻿@model Redux_Appts.Appointment
+
+
+<dl class="dl-horizontal">
+    @if (!User.IsInRole("Patient"))
+    {
+        <dt><a href="~/Appointments/Edit/@Model.ID">Edit</a></dt>
+    <dd></dd>
+    }
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Doctor.FirstName)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Doctor.FirstName)
+    </dd>
+    <dd>
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Doctor.LastName)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Doctor.LastName)
+    </dd>
+    
+    @if (User.IsInRole("Doctor"))
+    {
+    <dt>
+        @Html.DisplayNameFor(model => model.Patient.FirstName)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Patient.FirstName)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Patient.LastName)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Patient.LastName)
+    </dd>
+    }
+    <dt>
+        @Html.DisplayNameFor(model => model.Description)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Description)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Diagnosis)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Diagnosis)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.StartDateTime)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.StartDateTime)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.EndDateTime)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.EndDateTime)
+    </dd>
+
+</dl>
+<hr />

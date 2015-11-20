@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroceryStore_Service", "GroceryStore_Service\GroceryStore_Service.csproj", "{895A1133-E8D3-450E-84A0-840B7B0A88CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventorySystem", "InventorySystem\InventorySystem.csproj", "{35B10CA9-7DDD-471B-913A-1A72F3719107}"
+	ProjectSection(ProjectDependencies) = postProject
+		{895A1133-E8D3-450E-84A0-840B7B0A88CB} = {895A1133-E8D3-450E-84A0-840B7B0A88CB}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "POS", "POS", "{89DAB147-D7EC-4AA8-A619-DF5497201B36}"
+	ProjectSection(SolutionItems) = preProject
+		index.html = index.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Views", "Views", "{F8CA7A99-40B3-4AF1-BF94-40848D9E126E}"
+	ProjectSection(SolutionItems) = preProject
+		LookupItem.html = LookupItem.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Controllers", "Controllers", "{706204C9-129F-473E-9C5E-3EBF803083E8}"
+	ProjectSection(SolutionItems) = preProject
+		posctrl.js = posctrl.js
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{895A1133-E8D3-450E-84A0-840B7B0A88CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{895A1133-E8D3-450E-84A0-840B7B0A88CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{895A1133-E8D3-450E-84A0-840B7B0A88CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{895A1133-E8D3-450E-84A0-840B7B0A88CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35B10CA9-7DDD-471B-913A-1A72F3719107}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35B10CA9-7DDD-471B-913A-1A72F3719107}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35B10CA9-7DDD-471B-913A-1A72F3719107}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35B10CA9-7DDD-471B-913A-1A72F3719107}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F8CA7A99-40B3-4AF1-BF94-40848D9E126E} = {89DAB147-D7EC-4AA8-A619-DF5497201B36}
+		{706204C9-129F-473E-9C5E-3EBF803083E8} = {89DAB147-D7EC-4AA8-A619-DF5497201B36}
+	EndGlobalSection
+EndGlobal

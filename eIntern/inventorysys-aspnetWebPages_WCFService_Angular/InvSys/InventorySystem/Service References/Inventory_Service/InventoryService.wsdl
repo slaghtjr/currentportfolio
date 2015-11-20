@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="InventoryService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:9002/Services/InventoryService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:9002/Services/InventoryService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:9002/Services/InventoryService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:9002/Services/InventoryService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/GroceryStore_Service.Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IInventoryService_CreateInventory_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateInventory" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_CreateInventory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateInventoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_RetrieveInventory_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveInventory" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_RetrieveInventory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveInventoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_UpdateInventory_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateInventory" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_UpdateInventory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateInventoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_DeleteInventory_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInventory" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_DeleteInventory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInventoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_RetrieveAllInventory_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAllInventory" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_RetrieveAllInventory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAllInventoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_CreateStock_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateStock" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_CreateStock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_RetrieveStock_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveStock" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_RetrieveStock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_UpdateStock_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStock" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_UpdateStock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_DeleteStock_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteStock" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_DeleteStock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_GetProductNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductNames" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_GetProductNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_GetProductsDD_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductsDD" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_GetProductsDD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductsDDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_GetProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProducts" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_GetProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_GetDepartmentNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepartmentNames" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_GetDepartmentNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepartmentNamesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IInventoryService">
+    <wsdl:operation name="CreateInventory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/CreateInventory" message="tns:IInventoryService_CreateInventory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/CreateInventoryResponse" message="tns:IInventoryService_CreateInventory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveInventory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/RetrieveInventory" message="tns:IInventoryService_RetrieveInventory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/RetrieveInventoryResponse" message="tns:IInventoryService_RetrieveInventory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInventory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/UpdateInventory" message="tns:IInventoryService_UpdateInventory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/UpdateInventoryResponse" message="tns:IInventoryService_UpdateInventory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInventory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/DeleteInventory" message="tns:IInventoryService_DeleteInventory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/DeleteInventoryResponse" message="tns:IInventoryService_DeleteInventory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAllInventory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/RetrieveAllInventory" message="tns:IInventoryService_RetrieveAllInventory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/RetrieveAllInventoryResponse" message="tns:IInventoryService_RetrieveAllInventory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateStock">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/CreateStock" message="tns:IInventoryService_CreateStock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/CreateStockResponse" message="tns:IInventoryService_CreateStock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveStock">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/RetrieveStock" message="tns:IInventoryService_RetrieveStock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/RetrieveStockResponse" message="tns:IInventoryService_RetrieveStock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStock">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/UpdateStock" message="tns:IInventoryService_UpdateStock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/UpdateStockResponse" message="tns:IInventoryService_UpdateStock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStock">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/DeleteStock" message="tns:IInventoryService_DeleteStock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/DeleteStockResponse" message="tns:IInventoryService_DeleteStock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/GetProductNames" message="tns:IInventoryService_GetProductNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/GetProductNamesResponse" message="tns:IInventoryService_GetProductNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsDD">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/GetProductsDD" message="tns:IInventoryService_GetProductsDD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/GetProductsDDResponse" message="tns:IInventoryService_GetProductsDD_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/GetProducts" message="tns:IInventoryService_GetProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/GetProductsResponse" message="tns:IInventoryService_GetProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/GetDepartmentNames" message="tns:IInventoryService_GetDepartmentNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/GetDepartmentNamesResponse" message="tns:IInventoryService_GetDepartmentNames_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IInventoryService" type="tns:IInventoryService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateInventory">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/CreateInventory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveInventory">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/RetrieveInventory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInventory">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/UpdateInventory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInventory">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/DeleteInventory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAllInventory">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/RetrieveAllInventory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateStock">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/CreateStock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveStock">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/RetrieveStock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStock">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/UpdateStock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStock">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/DeleteStock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductNames">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/GetProductNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsDD">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/GetProductsDD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProducts">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/GetProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentNames">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/GetDepartmentNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InventoryService">
+    <wsdl:port name="BasicHttpBinding_IInventoryService" binding="tns:BasicHttpBinding_IInventoryService">
+      <soap:address location="http://localhost:9002/Services/InventoryService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

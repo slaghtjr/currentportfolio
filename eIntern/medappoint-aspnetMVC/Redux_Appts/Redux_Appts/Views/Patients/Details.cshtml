@@ -1,0 +1,71 @@
+﻿@model Redux_Appts.Patient
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Patient</h4>
+    @if (User.IsInRole("Doctor"))
+    {@*This ActionLink is to edit the Appointments for the Patient*@
+        @Html.ActionLink("Add Appointments", "Create", "Appointments") <br />
+        @Html.ActionLink("Add Prescriptions", "Create", "Prescriptions") 
+    }
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AspNetUser.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AspNetUser.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DisplayName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DisplayName)
+        </dd>
+    </dl>
+</div>
+<h3>Appointments</h3>
+@foreach (var appt in Model.Appointments)
+{
+    @Html.Partial("_AppointmentDetailView", appt)
+}
+<h3>Prescriptions</h3>
+@foreach (var script in Model.Prescriptions)
+{
+    @Html.Partial("_DrugsPartialView", script)
+}
+<p>
+    @if (User.IsInRole("Admin"))
+    {@*This ActionLink is to edit the actual Patient*@
+    @Html.ActionLink("Edit", "Edit", new
+{
+    id = Model.ID
+}) }
+
+    @Html.ActionLink("Back to List", "PatientDoctor")
+</p>

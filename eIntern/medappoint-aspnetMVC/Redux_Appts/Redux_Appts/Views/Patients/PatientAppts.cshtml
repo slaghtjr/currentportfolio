@@ -1,0 +1,25 @@
+﻿@model Redux_Appts.Models.MixedModel
+
+@{
+    ViewBag.Title = "PatientAppts";
+}
+
+<h2>PatientAppts</h2>
+
+    @foreach (var user in Model.Users)
+    {
+        foreach (var patient in Model.Patients)
+        {
+            if (user.Id == patient.UserID)
+            {
+                foreach (var doctor in Model.Doctors)
+                {
+                    @Html.Partial("_DoctorInfoView", doctor)
+                }
+                foreach (var appt in Model.Appointments)
+                {
+                    @Html.Partial("_AppointmentDetailView", appt)
+                }
+            }
+        }
+    }

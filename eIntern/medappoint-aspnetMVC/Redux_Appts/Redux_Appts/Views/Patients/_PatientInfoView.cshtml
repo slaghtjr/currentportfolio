@@ -1,0 +1,32 @@
+﻿@model Redux_Appts.Models.Patient
+
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => @Model.FirstName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => @Model.LastName)
+    </td>
+    @if (User.IsInRole("Admin"))
+    {
+        <td>
+            @Html.DisplayFor(modelItem => @Model.DisplayName)
+        </td>
+    }
+    <td>
+        @if (User.IsInRole("Admin"))
+        {@Html.ActionLink("Edit", "Edit", new
+    {
+        id = @Model.ID
+    })}
+        @Html.ActionLink("Details", "Details", new
+   {
+       id = @Model.ID
+   })
+        @if (User.IsInRole("Admin"))
+        {@Html.ActionLink("Delete", "Delete", new
+    {
+        id = @Model.ID
+    })}
+    </td>
+</tr>

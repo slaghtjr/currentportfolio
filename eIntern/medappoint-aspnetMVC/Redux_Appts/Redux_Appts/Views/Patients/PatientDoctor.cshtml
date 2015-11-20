@@ -1,0 +1,60 @@
+﻿@*@model Redux_Appts.Models.MixedModel*@
+
+@model IEnumerable<Redux_Appts.Models.Patient>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@if (User.IsInRole("Admin"))
+{
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+}
+<table class="table">
+    <tr>
+        <th>
+            First Name
+        </th>
+        <th>
+            Last Name
+        </th>
+        @if (User.IsInRole("Admin"))
+        {
+            <th>
+                Display Name
+            </th>
+        }
+        <th></th>
+    </tr>
+    @*@if (User.IsInRole("Doctor"))
+    {
+        foreach (var user in Model.Users)
+        {
+            foreach (var doctor in Model.Doctors)
+            {
+                if (user.Id == doctor.User_ID)
+                {
+                    foreach (var patient in doctor.Patients)
+                    {
+                        @Html.Partial("_PatientInfoView", patient)
+                    }
+                }
+            }
+        }
+    }*@
+
+   @foreach (var item in Model.First().Doctors.First().Patients)
+   {
+    @Html.Partial("_PatientInfoView", item)
+   }
+        @*@if (User.IsInRole("Admin"))
+        {    
+            foreach (var patient in Model.Patients)
+            {
+               @Html.Partial("_PatientInfoView", patient)
+            }
+        }*@
+</table>

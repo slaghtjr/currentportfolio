@@ -1,0 +1,37 @@
+{
+	"type": "Collection",
+	"properties": {
+		"question": {
+			"name": "question",
+			"type": "array",
+			"typeLabel": "array",
+			"required": true,
+			"id": "question",
+			"order": 0
+		},
+		"testName": {
+			"name": "testName",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "testName",
+			"order": 1
+		},
+		"questionType": {
+			"name": "questionType",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "questionType",
+			"order": 2
+		},
+		"answers": {
+			"name": "answers",
+			"type": "array",
+			"typeLabel": "array",
+			"required": true,
+			"id": "answers",
+			"order": 3
+		}
+	}
+}

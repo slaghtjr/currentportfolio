@@ -1,0 +1,44 @@
+﻿@using Microsoft.AspNet.Identity
+@using Redux_Appts.Models
+
+<ul class="nav navbar-nav">
+    @if (User.IsInRole("Admin"))
+    {
+        <li>
+            @Html.ActionLink("Manage Users ", "AdminControl", "Manage", routeValues: null, htmlAttributes: new
+               {
+                title = "Manage Users"
+               })
+        </li>
+        <li>
+            @Html.ActionLink("Manage Patients ", "PatientDoctor","Patients", routeValues: null, htmlAttributes: new
+                {
+                    title = "Manage Patients"
+                })
+        </li>
+    }
+    @if (User.IsInRole("Doctor"))
+    {
+        <li>
+            @Html.ActionLink("Manage Patients ", "PatientDoctor","Patients", routeValues: null, htmlAttributes: new
+       {
+           title = "Manage Patients"
+       })
+        </li>
+    }
+    @if (User.IsInRole("Patient"))
+    {
+        <li>
+            @Html.ActionLink("View Doctors", "DoctorPatient", "Doctors", routeValues: null, htmlAttributes: new
+       {
+           title = "View Doctors"
+       })
+        </li>
+        <li>
+            @Html.ActionLink("View Appointments", "PatientAppts", "Patients", routeValues: null, htmlAttributes: new
+       {
+           title = "View Appointments"
+       })
+        </li>
+    }
+</ul>
